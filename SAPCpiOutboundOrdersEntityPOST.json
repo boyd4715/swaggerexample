@@ -1,0 +1,711 @@
+{
+    "$schema": "https://json-schema.org/draft-04/schema#",
+    "definitions": {
+        "SAPCpiOutboundOrders.SAPCpiOutboundOrder.SapCpiOutboundOrderItems.SAPCpiOutboundOrderItem": {
+            "type": "object",
+            "required": [
+                "integrationKey",
+                "orderId",
+                "entryNumber"
+            ],
+            "properties": {
+                "integrationKey": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 1
+                },
+                "orderId": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 1
+                },
+                "namedDeliveryDate": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "currencyIsoCode": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "entryNumber": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 1
+                },
+                "itemCategory": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "plant": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "productCode": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "productName": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "quantity": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "unit": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                }
+            }
+        },
+        "SAPCpiOutboundOrders.SAPCpiOutboundOrder.SapCpiOutboundOrderItems": {
+            "type": "object",
+            "properties": {
+                "sapCpiOutboundOrderItem": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/SAPCpiOutboundOrders.SAPCpiOutboundOrder.SapCpiOutboundOrderItems.SAPCpiOutboundOrderItem"},
+                    "minItems": 0
+                }
+            }
+        },
+        "SAPCpiOutboundOrders.SAPCpiOutboundOrder.SapCpiOutboundAddresses.SAPCpiOutboundAddress": {
+            "type": "object",
+            "required": [
+                "integrationKey",
+                "orderId"
+            ],
+            "properties": {
+                "integrationKey": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 1
+                },
+                "middleName": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "faxNumber": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "building": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "district": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "documentAddressId": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "email": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "countryIsoCode": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "apartment": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "city": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "orderId": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 1
+                },
+                "regionIsoCode": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "lastName": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "languageIsoCode": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "postalCode": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "pobox": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "firstName": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "houseNumber": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "middleName2": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "street": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "telNumber": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "titleCode": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                }
+            }
+        },
+        "SAPCpiOutboundOrders.SAPCpiOutboundOrder.SapCpiOutboundAddresses": {
+            "type": "object",
+            "properties": {
+                "sapCpiOutboundAddress": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/SAPCpiOutboundOrders.SAPCpiOutboundOrder.SapCpiOutboundAddresses.SAPCpiOutboundAddress"},
+                    "minItems": 0
+                }
+            }
+        },
+        "SAPCpiOutboundOrders.SAPCpiOutboundOrder.SapCpiConfig.SAPCpiOutboundConfig": {
+            "type": "object",
+            "required": [
+                "integrationKey",
+                "url",
+                "username"
+            ],
+            "properties": {
+                "integrationKey": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 1
+                },
+                "client": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "receiverName": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "receiverPort": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "senderName": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "senderPort": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "url": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 1
+                },
+                "username": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 1
+                }
+            }
+        },
+        "SAPCpiOutboundOrders.SAPCpiOutboundOrder.SapCpiConfig": {
+            "type": "object",
+            "properties": {
+                "sapCpiOutboundConfig": {"$ref": "#/definitions/SAPCpiOutboundOrders.SAPCpiOutboundOrder.SapCpiConfig.SAPCpiOutboundConfig"}
+            }
+        },
+        "SAPCpiOutboundOrders.SAPCpiOutboundOrder.SapCpiOutboundCardPayments.SAPCpiOutboundCardPayment": {
+            "type": "object",
+            "required": [
+                "integrationKey",
+                "orderId"
+            ],
+            "properties": {
+                "integrationKey": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 1
+                },
+                "ccOwner": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "orderId": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 1
+                },
+                "paymentProvider": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "requestId": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "subscriptionId": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "validToMonth": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "validToYear": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                }
+            }
+        },
+        "SAPCpiOutboundOrders.SAPCpiOutboundOrder.SapCpiOutboundCardPayments": {
+            "type": "object",
+            "properties": {
+                "sapCpiOutboundCardPayment": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/SAPCpiOutboundOrders.SAPCpiOutboundOrder.SapCpiOutboundCardPayments.SAPCpiOutboundCardPayment"},
+                    "minItems": 0
+                }
+            }
+        },
+        "SAPCpiOutboundOrders.SAPCpiOutboundOrder.SapCpiOutboundPartnerRoles.SAPCpiOutboundPartnerRole": {
+            "type": "object",
+            "required": [
+                "integrationKey",
+                "entryNumber",
+                "orderId"
+            ],
+            "properties": {
+                "integrationKey": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 1
+                },
+                "documentAddressId": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "entryNumber": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 1
+                },
+                "orderId": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 1
+                },
+                "partnerId": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "partnerRoleCode": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                }
+            }
+        },
+        "SAPCpiOutboundOrders.SAPCpiOutboundOrder.SapCpiOutboundPartnerRoles": {
+            "type": "object",
+            "properties": {
+                "sapCpiOutboundPartnerRole": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/SAPCpiOutboundOrders.SAPCpiOutboundOrder.SapCpiOutboundPartnerRoles.SAPCpiOutboundPartnerRole"},
+                    "minItems": 0
+                }
+            }
+        },
+        "SAPCpiOutboundOrders.SAPCpiOutboundOrder.SapCpiOutboundPriceComponents.SAPCpiOutboundPriceComponent": {
+            "type": "object",
+            "required": [
+                "integrationKey",
+                "orderId",
+                "entryNumber"
+            ],
+            "properties": {
+                "integrationKey": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 1
+                },
+                "orderId": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 1
+                },
+                "absolute": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "conditionCode": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "conditionCounter": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "currencyIsoCode": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "entryNumber": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 1
+                },
+                "priceQuantity": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "unit": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "value": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                }
+            }
+        },
+        "SAPCpiOutboundOrders.SAPCpiOutboundOrder.SapCpiOutboundPriceComponents": {
+            "type": "object",
+            "properties": {
+                "sapCpiOutboundPriceComponent": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/SAPCpiOutboundOrders.SAPCpiOutboundOrder.SapCpiOutboundPriceComponents.SAPCpiOutboundPriceComponent"},
+                    "minItems": 0
+                }
+            }
+        },
+        "SAPCpiOutboundOrders.SAPCpiOutboundOrder.Link.SapCpiOutboundOrderItems.SAPCpiOutboundOrderItem": {
+            "type": "object",
+            "required": ["integrationKey"],
+            "properties": {
+                "integrationKey": {"type": "string"}
+            }
+        },
+        "SAPCpiOutboundOrders.SAPCpiOutboundOrder.Link.SapCpiOutboundOrderItems": {
+            "type": "object",
+            "properties": {
+                "sapCpiOutboundOrderItem": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/SAPCpiOutboundOrders.SAPCpiOutboundOrder.Link.SapCpiOutboundOrderItems.SAPCpiOutboundOrderItem"},
+                    "minItems": 0
+                }
+            }
+        },
+        "SAPCpiOutboundOrders.SAPCpiOutboundOrder.Link.SapCpiOutboundAddresses.SAPCpiOutboundAddress": {
+            "type": "object",
+            "required": ["integrationKey"],
+            "properties": {
+                "integrationKey": {"type": "string"}
+            }
+        },
+        "SAPCpiOutboundOrders.SAPCpiOutboundOrder.Link.SapCpiOutboundAddresses": {
+            "type": "object",
+            "properties": {
+                "sapCpiOutboundAddress": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/SAPCpiOutboundOrders.SAPCpiOutboundOrder.Link.SapCpiOutboundAddresses.SAPCpiOutboundAddress"},
+                    "minItems": 0
+                }
+            }
+        },
+        "SAPCpiOutboundOrders.SAPCpiOutboundOrder.Link.SapCpiConfig.SAPCpiOutboundConfig": {
+            "type": "object",
+            "required": ["integrationKey"],
+            "properties": {
+                "integrationKey": {"type": "string"}
+            }
+        },
+        "SAPCpiOutboundOrders.SAPCpiOutboundOrder.Link.SapCpiConfig": {
+            "type": "object",
+            "properties": {
+                "sapCpiOutboundConfig": {"$ref": "#/definitions/SAPCpiOutboundOrders.SAPCpiOutboundOrder.Link.SapCpiConfig.SAPCpiOutboundConfig"}
+            }
+        },
+        "SAPCpiOutboundOrders.SAPCpiOutboundOrder.Link.SapCpiOutboundCardPayments.SAPCpiOutboundCardPayment": {
+            "type": "object",
+            "required": ["integrationKey"],
+            "properties": {
+                "integrationKey": {"type": "string"}
+            }
+        },
+        "SAPCpiOutboundOrders.SAPCpiOutboundOrder.Link.SapCpiOutboundCardPayments": {
+            "type": "object",
+            "properties": {
+                "sapCpiOutboundCardPayment": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/SAPCpiOutboundOrders.SAPCpiOutboundOrder.Link.SapCpiOutboundCardPayments.SAPCpiOutboundCardPayment"},
+                    "minItems": 0
+                }
+            }
+        },
+        "SAPCpiOutboundOrders.SAPCpiOutboundOrder.Link.SapCpiOutboundPartnerRoles.SAPCpiOutboundPartnerRole": {
+            "type": "object",
+            "required": ["integrationKey"],
+            "properties": {
+                "integrationKey": {"type": "string"}
+            }
+        },
+        "SAPCpiOutboundOrders.SAPCpiOutboundOrder.Link.SapCpiOutboundPartnerRoles": {
+            "type": "object",
+            "properties": {
+                "sapCpiOutboundPartnerRole": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/SAPCpiOutboundOrders.SAPCpiOutboundOrder.Link.SapCpiOutboundPartnerRoles.SAPCpiOutboundPartnerRole"},
+                    "minItems": 0
+                }
+            }
+        },
+        "SAPCpiOutboundOrders.SAPCpiOutboundOrder.Link.SapCpiOutboundPriceComponents.SAPCpiOutboundPriceComponent": {
+            "type": "object",
+            "required": ["integrationKey"],
+            "properties": {
+                "integrationKey": {"type": "string"}
+            }
+        },
+        "SAPCpiOutboundOrders.SAPCpiOutboundOrder.Link.SapCpiOutboundPriceComponents": {
+            "type": "object",
+            "properties": {
+                "sapCpiOutboundPriceComponent": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/SAPCpiOutboundOrders.SAPCpiOutboundOrder.Link.SapCpiOutboundPriceComponents.SAPCpiOutboundPriceComponent"},
+                    "minItems": 0
+                }
+            }
+        },
+        "SAPCpiOutboundOrders.SAPCpiOutboundOrder.Link": {
+            "type": "object",
+            "properties": {
+                "sapCpiOutboundOrderItems": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/SAPCpiOutboundOrders.SAPCpiOutboundOrder.Link.SapCpiOutboundOrderItems"},
+                    "minItems": 0
+                },
+                "sapCpiOutboundAddresses": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/SAPCpiOutboundOrders.SAPCpiOutboundOrder.Link.SapCpiOutboundAddresses"},
+                    "minItems": 0
+                },
+                "sapCpiConfig": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/SAPCpiOutboundOrders.SAPCpiOutboundOrder.Link.SapCpiConfig"},
+                    "minItems": 0
+                },
+                "sapCpiOutboundCardPayments": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/SAPCpiOutboundOrders.SAPCpiOutboundOrder.Link.SapCpiOutboundCardPayments"},
+                    "minItems": 0
+                },
+                "sapCpiOutboundPartnerRoles": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/SAPCpiOutboundOrders.SAPCpiOutboundOrder.Link.SapCpiOutboundPartnerRoles"},
+                    "minItems": 0
+                },
+                "sapCpiOutboundPriceComponents": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/SAPCpiOutboundOrders.SAPCpiOutboundOrder.Link.SapCpiOutboundPriceComponents"},
+                    "minItems": 0
+                }
+            }
+        },
+        "SAPCpiOutboundOrders.SAPCpiOutboundOrder": {
+            "type": "object",
+            "required": [
+                "integrationKey",
+                "orderId"
+            ],
+            "properties": {
+                "integrationKey": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 1
+                },
+                "paymentMode": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "distributionChannel": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "channel": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "creationDate": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "deliveryMode": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "currencyIsoCode": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "baseStoreUid": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "division": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "purchaseOrderNumber": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "orderId": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 1
+                },
+                "responseMessage": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "responseStatus": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "salesOrganization": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "shippingCondition": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "transactionType": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 0
+                },
+                "sapCpiOutboundOrderItems": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/SAPCpiOutboundOrders.SAPCpiOutboundOrder.SapCpiOutboundOrderItems"},
+                    "minItems": 0
+                },
+                "sapCpiOutboundAddresses": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/SAPCpiOutboundOrders.SAPCpiOutboundOrder.SapCpiOutboundAddresses"},
+                    "minItems": 0
+                },
+                "sapCpiConfig": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/SAPCpiOutboundOrders.SAPCpiOutboundOrder.SapCpiConfig"},
+                    "minItems": 0
+                },
+                "sapCpiOutboundCardPayments": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/SAPCpiOutboundOrders.SAPCpiOutboundOrder.SapCpiOutboundCardPayments"},
+                    "minItems": 0
+                },
+                "sapCpiOutboundPartnerRoles": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/SAPCpiOutboundOrders.SAPCpiOutboundOrder.SapCpiOutboundPartnerRoles"},
+                    "minItems": 0
+                },
+                "sapCpiOutboundPriceComponents": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/SAPCpiOutboundOrders.SAPCpiOutboundOrder.SapCpiOutboundPriceComponents"},
+                    "minItems": 0
+                },
+                "link": {"$ref": "#/definitions/SAPCpiOutboundOrders.SAPCpiOutboundOrder.Link"}
+            }
+        },
+        "SAPCpiOutboundOrders": {
+            "type": "object",
+            "required": ["sapCpiOutboundOrder"],
+            "properties": {
+                "sapCpiOutboundOrder": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/SAPCpiOutboundOrders.SAPCpiOutboundOrder"},
+                    "minItems": 1
+                }
+            }
+        }
+    },
+    "properties": {
+        "SAPCpiOutboundOrders": {"$ref": "#/definitions/SAPCpiOutboundOrders"}
+    }
+}
